@@ -1,0 +1,237 @@
+/* clear fix用 */
+.clear {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+body {
+  color: #333;
+}
+
+p {
+  font-size: 14px;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ページ */
+#page {
+  width: 980px;
+  margin: 0 auto;
+}
+
+/* nav バー */
+.navBar:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.navBarLeft {
+  float: left;
+}
+
+.navBarRight {
+  float: right;
+}
+
+.navBarRight:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.navBarRight p {
+  float: left;
+}
+
+/* 見出し */
+.pageTitle {
+  font-size: 26px;
+}
+
+.heading-typeA {
+  font-size: 18px;
+}
+
+/* share バー */
+.navShareTop {
+  float: right;
+}
+
+.navShareTop ul {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.navShareTop ul li {
+  list-style: none;
+  float: left;
+  width: 100px;
+}
+
+.articleDetailBody {
+  content: "";
+  clear: both;
+  display: block;
+  /* clearfixはclearfixしたい要素にかける。親要素ではない。 */
+}
+
+/* share bar 設定トライしたけどわかんないからコメントアウトする */
+/* .navShareBar {
+  background-color: #ccc;
+}
+
+.navShareBar ul:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.navShareBar ul li {
+  float: left;
+  width: 150px;
+  list-style: none;
+  background-color: #ccc;
+
+} */
+/* ボタン */
+.btn {
+  text-align: center;
+}
+
+.btn :hover {
+  opacity: 0.7;
+}
+
+/* アーティクルリスト */
+section .portfolioIndex {}
+
+.portfolioIndex article {
+  width: 185px;
+  height: 500px;
+  float: left;
+  padding-left: 25px;
+  border: 1px solid #ccc;
+}
+
+.portfolioIndex article:first-child {
+  margin-left: 0px;
+}
+
+.listTitle {
+  background-color: #1F5CAC;
+  color: #fff;
+  z-index: 0;
+}
+
+.portfolioIndex article img {
+  position: relative;
+  top: -35px;
+  z-index: -1;
+}
+
+.dx {
+  float: left;
+}
+
+.keiei {
+  float: left;
+  padding-left: 10px;
+}
+
+.time {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* footer nav 左右のナビゲーション */
+section.footerNav {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.footerNavLeft {
+  float: left;
+}
+
+.footerNavRight {
+  float: right;
+}
+
+/* navshare bottom */
+.navShareBottom {
+  content: "";
+  clear: both;
+  display: block;
+  float: right;
+}
+
+.navShareBottom ul {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.navShareBottom ul li {
+  list-style: none;
+  float: left;
+  width: 100px;
+}
+
+/* 企業情報 経営方針 */
+.corporateInfomation {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.corporateInfomation h1 {
+  border-top: 1px solid #ccc;
+}
+
+section.corporateInfomationContents {
+  border: 1px dotted #ccc;
+}
+.corporateInfomation ul{
+  padding-inline-start: 0px;
+  /* cssリセットを見直ししよう。こんなのテキストだと設定してなかったもんな。何かが抜けているはず */
+}
+
+.corporateInfomation ul li {
+  width: 230px;
+  float: left;
+  background-color: #ccc;
+}
+
+ /* 企業情報 NRIの強み */
+ .corporateInfomationStrength h2{
+
+   content: "";
+   clear: both;
+   display: block;
+
+ }
+
+ /* 企業情報　企業案内 */
+.corporateInfomationGuidance h2{
+
+  content: "";
+  clear: both;
+  display: block;
+
+}
+/* 企業情報　国内・海外拠点 */
+.corporateInfomationOffice h2{
+
+  content: "";
+  clear: both;
+  display: block;
+  
+}
