@@ -18,22 +18,21 @@ ul {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 a:visited {
-color: #c9c3c3;
+  color: #c9c3c3;
 }
 
 a:hover {
-color: #c9c3c3;
+  color: #c9c3c3;
 }
 
 a:active {
-color: #c9c3c3;
+  color: #c9c3c3;
 }
-
 
 /* ヘッダー */
 header {
@@ -47,7 +46,7 @@ header {
 }
 
 /* パンくずリスト、キャッチコピーまとめたやつ */
-.catchCopy{
+.catchCopy {
   margin-left: 180px;
 }
 
@@ -112,7 +111,7 @@ header {
   color: #fff;
 }
 
-.topImage{
+.topImage {
   position: absolute;
   top: 170px;
   left: 0;
@@ -127,7 +126,6 @@ header {
 .navShareTop {
   float: right;
   margin-top: 100px;
-
 }
 
 .navShareTop ul {
@@ -147,7 +145,7 @@ header {
   /* ここを直すとこおrから始めよう */
 }
 
-.navShareTop ul li img{
+.navShareTop ul li img {
   padding-left: 20px;
 }
 
@@ -193,7 +191,7 @@ section .portfolioIndex {}
   height: 500px;
   float: left;
   padding-left: 25px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
 }
 
 .portfolioIndex article:first-child {
@@ -204,6 +202,12 @@ section .portfolioIndex {}
   background-color: #1F5CAC;
   color: #fff;
   z-index: 0;
+}
+
+p.listTitle {
+  height: 20px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 .portfolioIndex article img {
