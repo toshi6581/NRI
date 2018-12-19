@@ -7,6 +7,7 @@
 
 body {
   color: #333;
+  margin: 0;
 }
 
 p {
@@ -17,6 +18,39 @@ ul {
   list-style: none;
 }
 
+a{
+  text-decoration: none;
+}
+
+a:visited {
+color: #c9c3c3;
+}
+
+a:hover {
+color: #c9c3c3;
+}
+
+a:active {
+color: #c9c3c3;
+}
+
+
+/* ヘッダー */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 60px;
+  margin: 0;
+}
+
+/* パンくずリスト、キャッチコピーまとめたやつ */
+.catchCopy{
+  margin-left: 180px;
+}
+
 /* ページ */
 #page {
   width: 980px;
@@ -24,6 +58,14 @@ ul {
 }
 
 /* nav バー */
+.navLanguage img {
+  margin-left: 20px
+}
+
+.navMenu img {
+  margin-left: 20px
+}
+
 .navBar:after {
   content: "";
   clear: both;
@@ -44,13 +86,37 @@ ul {
   display: block;
 }
 
+/* 画像周りのパディングを消す */
+.navBarLeft p {
+  margin: 0;
+  padding-left: 40px;
+}
+
 .navBarRight p {
   float: left;
+  margin: 0;
+}
+
+/* パンくずリスト */
+.topicPath {
+  margin-top: 130px;
+  margin-bottom: 75px;
+  color: #c9c3c3;
+  font-size: ;
+  line-height: ;
 }
 
 /* 見出し */
 .pageTitle {
   font-size: 26px;
+  color: #fff;
+}
+
+.topImage{
+  position: absolute;
+  top: 170px;
+  left: 0;
+  z-index: -1;
 }
 
 .heading-typeA {
@@ -60,6 +126,8 @@ ul {
 /* share バー */
 .navShareTop {
   float: right;
+  margin-top: 100px;
+
 }
 
 .navShareTop ul {
@@ -71,7 +139,16 @@ ul {
 .navShareTop ul li {
   list-style: none;
   float: left;
-  width: 100px;
+}
+
+.navShareTop ul li:first-child {
+  font-size: 12px;
+  vertical-align: top;
+  /* ここを直すとこおrから始めよう */
+}
+
+.navShareTop ul li img{
+  padding-left: 20px;
 }
 
 .articleDetailBody {
@@ -199,7 +276,8 @@ section.footerNav {
 section.corporateInfomationContents {
   border: 1px dotted #ccc;
 }
-.corporateInfomation ul{
+
+.corporateInfomation ul {
   padding-inline-start: 0px;
   /* cssリセットを見直ししよう。こんなのテキストだと設定してなかったもんな。何かが抜けているはず */
 }
@@ -210,28 +288,23 @@ section.corporateInfomationContents {
   background-color: #ccc;
 }
 
- /* 企業情報 NRIの強み */
- .corporateInfomationStrength h2{
-
-   content: "";
-   clear: both;
-   display: block;
-
- }
-
- /* 企業情報　企業案内 */
-.corporateInfomationGuidance h2{
-
+/* 企業情報 NRIの強み */
+.corporateInfomationStrength h2 {
   content: "";
   clear: both;
   display: block;
-
 }
-/* 企業情報　国内・海外拠点 */
-.corporateInfomationOffice h2{
 
+/* 企業情報　企業案内 */
+.corporateInfomationGuidance h2 {
   content: "";
   clear: both;
   display: block;
-  
+}
+
+/* 企業情報　国内・海外拠点 */
+.corporateInfomationOffice h2 {
+  content: "";
+  clear: both;
+  display: block;
 }
