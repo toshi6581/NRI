@@ -184,13 +184,16 @@ header {
 }
 
 /* アーティクルリスト */
-section .portfolioIndex {}
 
 .portfolioIndex article {
-  width: 185px;
+  width: 245px;
   height: 500px;
   float: left;
-  padding-left: 25px;
+  /* padding-left: 25px; */
+  /* 各項目のすきまをあけるために指定したが、無駄に思える。なぜなら、各項目はWidth 245pxで指定していて、画像は185pxなのでどうしても隙間ができる。
+  なのでわざわざpadding or marginを指定するとその分余計に隙間が空くんだな。 */
+  box-sizing: border-box;
+
   /* border: 1px solid #ccc; */
 }
 
@@ -209,6 +212,11 @@ p.listTitle {
   padding-top: 5px;
   padding-left: 5px;
 }
+
+.portfolioIndex article p{
+  width: 180px;
+}
+
 
 .portfolioIndex article img {
   position: relative;
