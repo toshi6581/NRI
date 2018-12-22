@@ -254,6 +254,8 @@ p.pageTitle {
   margin-left: 0px;
 }
 
+
+
 .listTitle {
   background-color: #1F5CAC;
   color: #fff;
@@ -280,6 +282,13 @@ a.listAndImage:hover{
 
   border: 1px solid #005BAC;
 
+}
+
+.portfolioIndexHonbun{
+  font-size: 14px;
+  line-height: 21px;
+  color: #333;
+  weight: 400;
 }
 
 .portfolioIndex article img {
