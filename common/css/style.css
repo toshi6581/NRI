@@ -8,6 +8,8 @@
 body {
   color: #333;
   margin: 0;
+  font-family: "Noto Sans Japanese", sans-serif;
+  /* fontちゃんと適用されてない気がする */
 }
 
 p {
@@ -45,6 +47,14 @@ header {
   margin: 0;
 }
 
+p.second img {
+  margin-left: 25px;
+}
+
+p.third img {
+  margin-left: 25px;
+}
+
 /* パンくずリスト、キャッチコピーまとめたやつ */
 .catchCopy {
   margin-left: 180px;
@@ -52,6 +62,12 @@ header {
 
 /* ページ */
 #page {
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* ページ後半 企業情報以下 */
+#pageBottom {
   width: 980px;
   margin: 0 auto;
 }
@@ -98,6 +114,7 @@ header {
 
 /* パンくずリスト */
 .topicPath {
+  font-size: 12px;
   margin-top: 130px;
   margin-bottom: 75px;
   color: #c9c3c3;
@@ -111,6 +128,10 @@ header {
   color: #fff;
 }
 
+p.pageTitle {
+  font-size: 20px;
+}
+
 .topImage {
   position: absolute;
   top: 170px;
@@ -119,13 +140,15 @@ header {
 }
 
 .heading-typeA {
-  font-size: 18px;
+  font-size: 22px;
+  margin-bottom: 40px;
 }
 
 /* share バー */
 .navShareTop {
   float: right;
-  margin-top: 100px;
+  margin-top: 140px;
+  margin-bottom: 50px;
 }
 
 .navShareTop ul {
@@ -140,9 +163,10 @@ header {
 }
 
 .navShareTop ul li:first-child {
-  font-size: 12px;
-  vertical-align: top;
+  font-size: 10px;
   /* ここを直すとこおrから始めよう */
+  font-weight: bold;
+  margin-top: 5px;
 }
 
 .navShareTop ul li img {
@@ -154,6 +178,12 @@ header {
   clear: both;
   display: block;
   /* clearfixはclearfixしたい要素にかける。親要素ではない。 */
+  margin-bottom: 40px;
+}
+
+.articleDetailBody p {
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 /* share bar 設定トライしたけどわかんないからコメントアウトする */
@@ -177,6 +207,8 @@ header {
 /* ボタン */
 .btn {
   text-align: center;
+  margin-top: 40px;
+  margin-bottom: 75px;
 }
 
 .btn :hover {
@@ -184,16 +216,11 @@ header {
 }
 
 /* アーティクルリスト */
-
 .portfolioIndex article {
-  width: 245px;
-  height: 500px;
+  width: 185px;
+  height: 370px;
   float: left;
-  /* padding-left: 25px; */
-  /* 各項目のすきまをあけるために指定したが、無駄に思える。なぜなら、各項目はWidth 245pxで指定していて、画像は185pxなのでどうしても隙間ができる。
-  なのでわざわざpadding or marginを指定するとその分余計に隙間が空くんだな。 */
-  box-sizing: border-box;
-
+  margin-left: 20px;
   /* border: 1px solid #ccc; */
 }
 
@@ -213,37 +240,51 @@ p.listTitle {
   padding-left: 5px;
 }
 
-.portfolioIndex article p{
-  width: 180px;
-}
-
-
 .portfolioIndex article img {
   position: relative;
-  top: -35px;
+  top: -40px;
   z-index: -1;
+  margin-bottom: -30px;
+  border: 1px solid #ccc;
 }
 
-.dx {
-  float: left;
+.portfolioIndexTag {
+  display: flex;
 }
 
-.keiei {
-  float: left;
-  padding-left: 10px;
+.portfolioIndexTag p {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  margin-left: 5px;
+  font-size: 12px;
+  margin-top: -4px;
+}
+
+.portfolioIndexTag p:first-child {
+  margin-left: 0px;
+}
+
+.portfolioIndex article:nth-child(5) {
+  margin-left: 0;
 }
 
 .time {
   content: "";
   clear: both;
   display: block;
+  margin-top: -2px;
 }
 
-/* footer nav 左右のナビゲーション */
+/* footer nav 左右のナビゲーション ビジネスモデルの特徴のところ */
 section.footerNav {
   content: "";
   clear: both;
   display: block;
+  padding-top: 150px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #0c419a;
 }
 
 .footerNavLeft {
@@ -254,27 +295,71 @@ section.footerNav {
   float: right;
 }
 
-/* navshare bottom */
-.navShareBottom {
+/* NRIの強み　追加された箇所 */
+section.nriStrength {
   content: "";
   clear: both;
   display: block;
+  background-color: #DEECF8;
+  padding: 20px 20px 40px;
+  margin: 60px 0 0;
+}
+
+section.nriStrength p {
+  font-size: 16px;
+  line-height: 19px;
+  color: #0c419a;
+  background-color: #fff;
+  margin-left: 20px;
+  width: 250px;
+  height: 70px;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
+section.nriStrength p:first-child {
+  margin-left: 0px;
+}
+
+.nriStrengthTop {
+  display: flex;
+}
+
+.nriStrengthBottom {
+  display: flex;
+}
+
+/* navshare ページ中央 */
+.navShareMiddle {
   float: right;
+  margin-top: 60px;
+  margin-bottom: 100px;
 }
 
-.navShareBottom ul {
+.navShareMiddle ul {
   content: "";
   clear: both;
   display: block;
 }
 
-.navShareBottom ul li {
+.navShareMiddle ul li {
   list-style: none;
   float: left;
-  width: 100px;
 }
 
-/* 企業情報 経営方針 */
+.navShareMiddle ul li:first-child {
+  font-size: 10px;
+  /* ここ直さないと */
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.navShareMiddle ul li img {
+  padding-left: 20px;
+}
+
+/* 企業情報 経営方針*/
 .corporateInfomation {
   content: "";
   clear: both;
@@ -282,41 +367,144 @@ section.footerNav {
 }
 
 .corporateInfomation h1 {
-  border-top: 1px solid #ccc;
+  font-size: 20px;
+  line-height: 38px;
+  border-top: 2px solid #000;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-section.corporateInfomationContents {
-  border: 1px dotted #ccc;
+.corporateInfomationContents {
+  padding-top: 20px;
+  padding-bottom: 110px;
+  border-top: 1px dotted #000;
+  border-bottom: 1px dotted #000;
+}
+
+.corporateInfomationContents h2 {
+  font-size: 16px;
+  line-height: 30px;
+  color: #333;
+  font-weight: 700;
 }
 
 .corporateInfomation ul {
   padding-inline-start: 0px;
+  padding-top: 20px;
   /* cssリセットを見直ししよう。こんなのテキストだと設定してなかったもんな。何かが抜けているはず */
 }
 
 .corporateInfomation ul li {
-  width: 230px;
+  width: 245px;
   float: left;
-  background-color: #ccc;
+  font-size: 14px;
+  line-height: 21px;
+  color: #0c419a;
+  font-weight: 400;
+  margin-bottom: 20px;
+  /* background-color: #ccc; */
 }
 
-/* 企業情報 NRIの強み */
-.corporateInfomationStrength h2 {
+/* 前のページに戻る */
+.backPage {
+  content: "";
+  clear: both;
+  display: block;
+  margin: 80px 0;
+  font-size: 16px;
+  line-height: 30px;
+  color: #0c419a;
+  font-weight: 400;
+}
+
+/* navshare ページ下部 */
+.navShareBottom {
+  display: flex;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 20px 300px;
+  margin-bottom: 40px;
+}
+
+.navShareBottom ul {}
+
+.navShareBottom ul li {
+  list-style: none;
+  display: inline-block;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 30px;
+  color: #005bac;
+  weight: 700;
+  font-family: "HelveticaNeue"
+}
+
+.navShareBottom ul li img {
+  margin-left: 40px;
+}
+
+/* ナレッジインサイト以下のフッター達 */
+.footerContents {
   content: "";
   clear: both;
   display: block;
 }
 
-/* 企業情報　企業案内 */
-.corporateInfomationGuidance h2 {
-  content: "";
-  clear: both;
-  display: block;
+.footerContents h3 {
+  font-size: 16px;
+  line-height: 24px;
+  color: #666;
+  weight: 700;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
-/* 企業情報　国内・海外拠点 */
-.corporateInfomationOffice h2 {
-  content: "";
-  clear: both;
-  display: block;
+.footerContents ul {
+  padding-left: 0;
+}
+
+.footerContents ul li {
+  font-size: 14px;
+  line-height: 21px;
+  weight: 400;
+  color: #666;
+  margin-top: 20px;
+}
+
+.footerContentsGroup {
+  display: flex;
+}
+
+.footerContentsDetail {
+  width: 225px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* 免責条項など */
+footer ul {
+  display: flex;
+  margin-top: 60px;
+  padding-left: 0;
+}
+
+footer ul li{
+  font-size: 12px;
+  line-height: 18px;
+  color: #999;
+  weight: 400;
+  border-left: 1px solid #999;
+  padding: 0 15px;
+}
+
+footer ul li:first-child{
+  border-left: 0px;
+  padding-left: 0px;
+}
+
+#copyright{
+  font-size: 12px;
+  line-height: 19px;
+  color: #333;
 }
