@@ -1,15 +1,15 @@
-/* clear fix用 */
-.clear {
-  content: "";
-  clear: both;
-  display: block;
+.new:before {
+  content: url(../images/heading-h2.png);
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
 }
 
 body {
   color: #333;
   margin: 0;
   font-family: "Noto Sans Japanese", sans-serif;
-  /* fontちゃんと適用されてない気がする */
 }
 
 p {
@@ -62,6 +62,10 @@ p.third img {
 /* パンくずリスト、キャッチコピーまとめたやつ */
 .catchCopy {
   margin-left: 180px;
+}
+
+div h1.pageTitle {
+  margin-bottom: 155px;
 }
 
 /* ページ */
@@ -157,35 +161,33 @@ p.pageTitle {
 
 .heading-typeA {
   font-size: 22px;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 /* share バー */
-.navShareTop {
+.navShare {
   float: right;
-  margin-top: 140px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
-.navShareTop ul {
+.navShare ul {
   content: "";
   clear: both;
   display: block;
 }
 
-.navShareTop ul li {
+.navShare ul li {
   list-style: none;
   float: left;
 }
 
-.navShareTop ul li:first-child {
+.navShare ul li:first-child {
   font-size: 10px;
-  /* ここを直すとこおrから始めよう */
   font-weight: bold;
   margin-top: 5px;
 }
 
-.navShareTop ul li img {
+.navShare ul li img {
   padding-left: 20px;
 }
 
@@ -193,13 +195,12 @@ p.pageTitle {
   content: "";
   clear: both;
   display: block;
-  /* clearfixはclearfixしたい要素にかける。親要素ではない。 */
   margin-bottom: 40px;
 }
 
 .articleDetailBodyHeader h1 {
   margin-top: 0;
-  padding-left: 5px;
+  margin-bottom: 35px;
 }
 
 .articleDetailBody p {
@@ -212,24 +213,6 @@ p.pageTitle {
   display: flex;
 }
 
-/* share bar 設定トライしたけどわかんないからコメントアウトする */
-/* .navShareBar {
-  background-color: #ccc;
-}
-
-.navShareBar ul:after{
-  content: "";
-  clear: both;
-  display: block;
-}
-
-.navShareBar ul li {
-  float: left;
-  width: 150px;
-  list-style: none;
-  background-color: #ccc;
-
-} */
 /* ボタン */
 .btn {
   text-align: center;
@@ -247,14 +230,11 @@ p.pageTitle {
   height: 370px;
   float: left;
   margin-left: 20px;
-  /* border: 1px solid #ccc; */
 }
 
 .portfolioIndex article:first-child {
   margin-left: 0px;
 }
-
-
 
 .listTitle {
   background-color: #1F5CAC;
@@ -269,22 +249,20 @@ p.listTitle {
   margin-top: 0;
 }
 
-a.listAndImage{
+a.listAndImage {
   content: "";
-clear: both;
-display: block;
-height: 185px;
-width: 185px;
-margin-bottom: 15px;
+  clear: both;
+  display: block;
+  height: 185px;
+  width: 185px;
+  margin-bottom: 15px;
 }
 
-a.listAndImage:hover{
-
+a.listAndImage:hover {
   border: 1px solid #005BAC;
-
 }
 
-.portfolioIndexHonbun{
+.portfolioIndexHonbun {
   font-size: 14px;
   line-height: 21px;
   color: #333;
@@ -375,7 +353,7 @@ section.footerNav {
   margin-bottom: 100px;
 }
 
-.footerNav a:hover{
+.footerNav a:hover {
   color: inherit;
   text-decoration: underline;
 }
@@ -395,7 +373,7 @@ section.nriStrength {
   display: block;
   background-color: #DEECF8;
   padding: 10px 20px 40px;
-  margin: 60px 0 0;
+  margin: 60px 0 60px;
 }
 
 section.nriStrength h2 {
@@ -451,40 +429,15 @@ div.nriStrengthBottom p {
   padding-right: 10px;
 }
 
-/* navshare ページ中央 */
-.navShareMiddle {
-  float: right;
-  margin-top: 30px;
-  margin-bottom: 100px;
-}
-
-.navShareMiddle ul {
-  content: "";
-  clear: both;
-  display: block;
-}
-
-.navShareMiddle ul li {
-  list-style: none;
-  float: left;
-}
-
-.navShareMiddle ul li:first-child {
-  font-size: 10px;
-  /* ここ直さないと */
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-.navShareMiddle ul li img {
-  padding-left: 20px;
-}
-
 /* 企業情報 経営方針*/
 .corporateInfomation {
   content: "";
   clear: both;
   display: block;
+}
+
+section.corporateInfomation {
+  margin-top: 200px;
 }
 
 .corporateInfomation h1 {
@@ -495,22 +448,21 @@ div.nriStrengthBottom p {
   padding-bottom: 20px;
 }
 
-.corporateInfomation a:hover{
+.corporateInfomation a:hover {
   color: inherit;
   text-decoration: underline;
 }
 
 .corporateInfomationContents {
   padding: 30px 0;
-  /* padding-bottom: 110px; */
   border-top: 1px dotted #000;
 }
 
-.corporateInfomationContents:nth-child(3) ul{
+.corporateInfomationContents:nth-child(3) ul {
   padding-bottom: 60px;
 }
 
-.corporateInfomationContents:nth-child(4) ul{
+.corporateInfomationContents:nth-child(4) ul {
   padding-bottom: 60px;
 }
 
@@ -518,8 +470,8 @@ div.nriStrengthBottom p {
   border-bottom: 1px dotted #000;
 }
 
-.corporateInfomationContents:nth-child(5) ul{
-padding-bottom: 20px;
+.corporateInfomationContents:nth-child(5) ul {
+  padding-bottom: 20px;
 }
 
 .corporateInfomationContents h2 {
@@ -544,7 +496,6 @@ padding-bottom: 20px;
   color: #0c419a;
   font-weight: 400;
   margin-bottom: 20px;
-  /* background-color: #ccc; */
 }
 
 /* 前のページに戻る */
@@ -559,7 +510,7 @@ padding-bottom: 20px;
   font-weight: 400;
 }
 
-.backPage a:hover{
+.backPage a:hover {
   color: inherit;
   text-decoration: underline;
 }
@@ -570,10 +521,7 @@ padding-bottom: 20px;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   padding: 20px 300px;
-  margin-bottom: 40px;
 }
-
-.navShareBottom ul {}
 
 .navShareBottom ul li {
   list-style: none;
@@ -597,7 +545,7 @@ padding-bottom: 20px;
   display: block;
 }
 
-.footerContents a:hover{
+.footerContents a:hover {
   color: inherit;
   text-decoration: underline;
 }
@@ -659,7 +607,7 @@ footer ul li:first-child {
   padding-left: 0px;
 }
 
-footer a:hover{
+footer a:hover {
   color: inherit;
   text-decoration: underline;
 }
